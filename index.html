@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carsz — Aluguel de carro para motorista de app</title>
-<meta name="description" content="Alugue seu carro pra rodar com Uber, 99 e apps de entrega. Documentação e IPVA inclusos, manutenção com coparticipação de 10% a 30% conforme o veículo. Sem burocracia.">
+<meta name="description" content="Alugue seu carro pra rodar com Uber, 99 e apps de entrega. Documentação e IPVA inclusos, seguro total e assistência 24h. Sem burocracia.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -42,6 +42,9 @@
   .nav-links a:hover{color:#fff;}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:700;font-size:15px;border:none;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease, background .15s ease;white-space:nowrap;}
   .btn-amber{background:var(--amber);color:var(--navy);}
+  .btn-driver{background:transparent;color:#FFB800;border:2px solid #FFB800;padding:12px 22px;}
+  .btn-driver:hover{background:var(--amber);color:var(--navy);}
+  .nav-actions{display:flex;align-items:center;gap:12px;}
   .btn-amber:hover{background:#fff;transform:translateY(-2px);box-shadow:var(--shadow);}
   .btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.35);}
   .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
@@ -140,6 +143,9 @@
   .plate-mini{display:inline-flex;align-items:center;gap:6px;background:#fff;border-radius:6px;padding:4px 9px;font-family:'IBM Plex Mono';font-weight:600;font-size:11px;color:var(--navy);margin-bottom:18px;letter-spacing:.04em;}
   .plate-mini .flag{width:14px;height:10px;border-radius:2px;background:linear-gradient(180deg,var(--green) 33%,#fff 33%,#fff 66%,var(--amber) 66%);}
   .benefit-card h3{font-size:18px;margin-bottom:8px;}
+  .app-list{list-style:none;margin-top:10px;font-size:14.5px;color:#AEB8C9;}
+  .app-list li{padding-left:20px;position:relative;margin-top:5px;}
+  .app-list li:before{content:"✓";position:absolute;left:0;color:#FFB800;font-weight:700;}
   .benefit-card p{font-size:14.5px;color:#AEB8C9;}
 
   /* ---------- Frota / photo showcase full-bleed ---------- */
@@ -206,6 +212,8 @@
   /* ---------- Responsive ---------- */
   @media (max-width:960px){
     .nav-links{display:none;}
+    .nav-actions .btn{padding:10px 14px;font-size:13px;}
+    .nav-actions .btn-driver{padding:8px 12px;}
     .stats-inner{grid-template-columns:repeat(2,1fr);}
     .cf-grid{grid-template-columns:1fr;}
     .benefits-grid{grid-template-columns:1fr 1fr;}
@@ -239,7 +247,10 @@
       <a href="#depoimentos">Depoimentos</a>
       <a href="#faq">Dúvidas</a>
     </nav>
-    <a href="https://wa.me/5511963166971" target="_blank" rel="noopener" class="btn btn-amber">Chamar no WhatsApp</a>
+    <div class="nav-actions">
+      <a href="https://manutencao.carsz.com.br/motorista.html" target="_blank" rel="noopener" class="btn btn-driver">Área do Motorista</a>
+      <a href="https://wa.me/5511963166971" target="_blank" rel="noopener" class="btn btn-amber">Chamar no WhatsApp</a>
+    </div>
   </div>
 </header>
 
@@ -251,7 +262,7 @@
     <div class="hero-content wrap">
       <div class="eyebrow reveal in"><span class="pulse"></span> Veículos disponíveis para motoristas de aplicativo</div>
       <h1 class="reveal in">Seu carro pra rodar,<br>sem <span>burocracia</span> nenhuma.</h1>
-      <p class="lead reveal in">Alugue um carro pronto pra trabalhar com Uber, 99 e apps de entrega. Documentação e IPVA por nossa conta, manutenção preventiva e corretiva com coparticipação de 10% a 30% conforme o ano do veículo — você entra e roda.</p>
+      <p class="lead reveal in">Alugue um carro pronto pra trabalhar com Uber, 99 e apps de entrega. Documentação e IPVA por nossa conta, seguro total e assistência 24h — você entra e roda.</p>
       <div class="hero-ctas reveal in">
         <a href="https://wa.me/5511963166971" target="_blank" rel="noopener" class="btn btn-amber">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 0 1 2-2h3.28a1 1 0 0 1 .95.68l1.5 4.5a1 1 0 0 1-.5 1.21l-2.1 1.05a11.5 11.5 0 0 0 5.4 5.4l1.05-2.1a1 1 0 0 1 1.21-.5l4.5 1.5a1 1 0 0 1 .68.95V19a2 2 0 0 1-2 2h-1C9.72 21 3 14.28 3 6z"/></svg>
@@ -275,7 +286,7 @@
       <div class="stat"><div class="num mono">48h</div><div class="label">para começar a rodar</div></div>
       <div class="stat"><div class="num mono">100%</div><div class="label">doc. e IPVA inclusos</div></div>
       <div class="stat"><div class="num mono">24/7</div><div class="label">assistência na estrada</div></div>
-      <div class="stat"><div class="num mono">10-30%</div><div class="label">coparticipação em manutenção</div></div>
+      <div class="stat"><div class="num mono">App</div><div class="label">exclusivo para motoristas</div></div>
     </div>
   </div>
 
@@ -333,10 +344,9 @@
       <div class="benefits-grid reveal">
         <div class="benefit-card"><div class="plate-mini"><span class="flag"></span>DOC</div><h3>Documentação em dia</h3><p>Toda a documentação do veículo fica sob nossa responsabilidade, sempre regularizada.</p></div>
         <div class="benefit-card"><div class="plate-mini"><span class="flag"></span>IPVA</div><h3>IPVA incluso</h3><p>Você não paga IPVA nem taxas de licenciamento — já está no valor do aluguel.</p></div>
-        <div class="benefit-card"><div class="plate-mini"><span class="flag"></span>MNT</div><h3>Manutenção preventiva e corretiva</h3><p>Revisões periódicas (preventiva) e reparos por desgaste ou defeito (corretiva) organizados por nós, com coparticipação de 10% a 30% do motorista sobre o valor total de peças e serviço, variando conforme o ano do veículo — pra manter o carro em dia sem pesar sozinho no seu bolso.</p></div>
         <div class="benefit-card"><div class="plate-mini"><span class="flag"></span>SEG</div><h3>Seguro total</h3><p>Cobertura completa do veículo contra colisão, roubo e furto — rode tranquilo, sem se preocupar em arcar sozinho com imprevistos.</p></div>
         <div class="benefit-card"><div class="plate-mini"><span class="flag"></span>SUP</div><h3>Assistência 24h</h3><p>Guincho, chaveiro e suporte disponíveis a qualquer hora, todos os dias — inclusive de madrugada e fins de semana.</p></div>
-        <div class="benefit-card"><div class="plate-mini"><span class="flag"></span>TRC</div><h3>Troca de veículo</h3><p>Precisa de um carro diferente? A gente resolve rápido, sem complicar seu trabalho.</p></div>
+        <div class="benefit-card"><div class="plate-mini"><span class="flag"></span>APP</div><h3>App do Motorista</h3><p>Seu canal direto com a CARSZ, na palma da mão:</p><ul class="app-list"><li>Acesso rápido, 24h por dia</li><li>Tudo do seu aluguel em um só lugar</li><li>Solicitações sem fila e sem burocracia</li><li>Atendimento mais ágil</li></ul></div>
       </div>
     </div>
   </section>
@@ -386,7 +396,7 @@
         <div class="t-card">
           <div class="t-body">
             <div class="t-stars">★★★★★</div>
-            <p class="quote">"O que mais pesa no bolso é manutenção e IPVA. Aqui o IPVA já vem incluso e a coparticipação da manutenção varia conforme o carro, então sei exatamente quanto vou gastar por mês."</p>
+            <p class="quote">"O que mais pesa no bolso é o IPVA. Aqui já vem incluso e o seguro também, então sei exatamente quanto vou gastar por mês."</p>
             <div class="t-person"><strong>Bruno</strong><span>Motorista parceiro 99</span></div>
           </div>
         </div>
@@ -447,18 +457,6 @@
           <div class="faq-a"><p>O aluguel semanal começa a partir de <strong>R$ 649,00</strong>, com <strong>km ilimitado</strong> — sem taxa extra por rodar mais. É cobrada uma caução de <strong>R$ 1.500,00</strong>, paga <strong>somente no momento da retirada do veículo</strong> (não é cobrada antes, na reserva ou na análise de cadastro).</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">Como funciona a coparticipação na manutenção? <span class="plus">+</span></button>
-          <div class="faq-a">
-            <p>A Carsz organiza e agenda toda a manutenção do veículo — tanto a <strong>preventiva</strong> (revisões periódicas programadas) quanto a <strong>corretiva</strong> (reparos por desgaste ou defeito ao longo do uso). A porcentagem de coparticipação do motorista varia conforme o ano/modelo do veículo alugado:</p>
-            <ul class="faq-coparticipacao">
-              <li><strong>Até 3 anos de ano/modelo:</strong> coparticipação de 30%</li>
-              <li><strong>De 4 a 5 anos de ano/modelo:</strong> coparticipação de 20%</li>
-              <li><strong>Acima de 5 anos de ano/modelo:</strong> coparticipação de 10%</li>
-            </ul>
-            <p>Em todos os casos, o percentual incide sobre o valor total de peças e mão de obra, e a Carsz arca com o restante. Assim o carro se mantém sempre em condição de rodar, sem pesar sozinho no seu bolso.</p>
-          </div>
-        </div>
-        <div class="faq-item">
           <button class="faq-q">Preciso de análise de crédito? <span class="plus">+</span></button>
           <div class="faq-a"><p>Fazemos uma análise cadastral simples, mas <strong>aceitamos motoristas com restrição no CPF</strong> (nome negativado, SPC/Serasa). O que avaliamos é o seu histórico como motorista de aplicativo, não o seu score de crédito — então uma restrição no nome não te impede de alugar.</p></div>
         </div>
@@ -472,7 +470,7 @@
     <div class="footer-grid">
       <div>
         <div class="logo"><span class="dot"></span>carsz</div>
-        <p class="footer-desc">Aluguel de carros para motoristas de aplicativo. Documentação e IPVA inclusos, manutenção com coparticipação de 10% a 30% conforme o veículo — você entra e roda.</p>
+        <p class="footer-desc">Aluguel de carros para motoristas de aplicativo. Documentação e IPVA inclusos, seguro total e assistência 24h — você entra e roda.</p>
       </div>
       <div>
         <h4>Navegação</h4>
